@@ -1,0 +1,9 @@
+<div class = "login-div">
+<h2>Please sign in for the best usage <h2>
+        <%= form_tag '/login' do %>
+          <%= text_field_tag :email, nil, placeholder: 'Email address', class: 'form-control' %>
+          <%= password_field_tag :password, nil, placeholder: 'Password', class: 'form-control' %>
+          <br>
+          <%= submit_tag "Sign in", class: 'btn btn-lg btn-primary btn-block signin-btn' %>
+        <% end %>
+      </div> 
