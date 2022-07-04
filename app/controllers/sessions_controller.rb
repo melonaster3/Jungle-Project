@@ -1,21 +1,21 @@
 class SessionsController < ApplicationController
-    def new 
-    end 
-
+    def new
+    end
+  
     def create
-        user = User.find_by_email(params[:email])
-
-        if user && user.authenticate(params[:password])
-            session[:user_id] = user.id
-            redirect_to '/'
-
-        else
-            redirect_to '/login'
-        end
+  
+       if user = User.authenticate_with_credentials(params[:email], params[:password])
+        session[:user_id] = user.id
+        flash.alert = 'Successfully logged in'
+        redirect_to '/'
+      else
+        redirect_to '/login', notice: 'User was not found'
+      end
     end
-
-    def destroy 
-        session[:user_id] = nil 
-        redirect_to '/login'
+  
+    def destroy
+      session[:user_id] = nil
+      redirect_to '/login', notice: 'Logged out'
     end
-end
+  end
+  
