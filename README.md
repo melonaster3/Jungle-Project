@@ -2,6 +2,8 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+![Front-Page](https://github.com/melonaster3/Jungle-Project/blob/master/public/README-PICS/Front-page.JPG?raw=true)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
@@ -22,6 +24,16 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
     - When logged in, admin can add, delete prdocuts and access admin endpoints
     - When an order is completed, an automated email recipet will be sent 
     - Testing done with Rspec and Cypress
+    
+    
+    
+![Product-List](https://github.com/melonaster3/Jungle-Project/blob/master/public/README-PICS/List-Plants.JPG?raw=true)
+
+![Cart](https://github.com/melonaster3/Jungle-Project/blob/master/public/README-PICS/cart.JPG?raw=true)
+
+![SpecificListing](https://github.com/melonaster3/Jungle-Project/blob/master/public/README-PICS/specific-listing.JPG?raw=true)
+
+
 ## Database
 
 If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
