@@ -13,6 +13,15 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
+## App Features
+
+    - Users are able to add product items to their cart 
+    - Users are able to buy items using the stripe payment 
+    - Users can browse either all the categories or specific categories of plants
+    - Users can sign up with email, name and password and also sign in using their email and password 
+    - When logged in, admin can add, delete prdocuts and access admin endpoints
+    - When an order is completed, an automated email recipet will be sent 
+    - Testing done with Rspec and Cypress
 ## Database
 
 If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
